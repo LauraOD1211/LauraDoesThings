@@ -1,3 +1,8 @@
 core/node_modules
 core/package.json
 core/package-lock.json
+client/node_modules
+core/public
+client/dist
+core/dist
+core/bin/www
