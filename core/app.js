@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 
 var indexRouter = require('./routes/index');
 var blogRouter = require('./routes/blog');
-
+var vocabRouter = require('./routes/vocab');
 
 mongoose.Promise = global.Promise;
 
@@ -24,6 +24,7 @@ app.use(express.static('public'));
 
 app.use('/', indexRouter);
 app.use('/blogposts', blogRouter);
+app.use('/vocab', vocabRouter);
 
 const PORT = process.env.PORT || 3000;
 

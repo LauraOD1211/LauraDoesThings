@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="card">
+        <div class="card-tabs">
+            <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="swedish-notes/#vocab">Vocab</a></li>
+                <li class="tab"><a class="active" href="swedish-notes/#grammar">Grammar</a></li>
+            </ul>
+        </div>
+        <div class="card-content grey lighten-4">
+            <div id="vocab" class="collection">
+                <a *ngFor="let vocablist of vocablists" [routerLink]="['/list', vocablist._id]" class="collection-item">{{vocablist.topic}}</a>
+            </div>
+            <div id="grammar" class="collection">
+                <a href="#!" class="collection-item">Alvin</a>
+            </div>
+        </div>
+    </div>
+</div>

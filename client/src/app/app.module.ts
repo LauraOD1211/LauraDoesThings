@@ -9,6 +9,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { ProjectsComponent } from './projects/projects.component';
+import { SwedishComponent } from './swedish/swedish.component';
+import { VocablistComponent } from './vocablist/vocablist.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     BlogpostComponent,
     NavbarComponent,
     FooterComponent,
-    HomepageComponent
+    HomepageComponent,
+    ProjectsComponent,
+    SwedishComponent,
+    VocablistComponent
   ],
   imports: [
     HttpClientModule,
