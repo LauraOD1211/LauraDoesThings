@@ -1,5 +1,6 @@
-<ul class="collection with-header">
-    <li class="collection-header"><h4>{{list.topic}}</h4></li>
-    <li *ngFor="let vocab of vocabs" class="collection-item">{{vocab.swedish}} means {{vocab.translation}}</li>
-
+<div class="container">
+  <ul class="collection with-header">
+      <li class="collection-header"><h4>{{list.topic}}</h4></li>
+      <li *ngFor="let vocab of vocabs" class="collection-item">{{vocab.swedish}} means {{vocab.translation}}</li>
   </ul>
+</div>

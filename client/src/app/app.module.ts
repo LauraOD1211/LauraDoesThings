@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { ProjectsComponent } from './projects/projects.component';
 import { SwedishComponent } from './swedish/swedish.component';
 import { VocablistComponent } from './vocablist/vocablist.component';
+import { GrammarComponent } from './grammar/grammar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { VocablistComponent } from './vocablist/vocablist.component';
     HomepageComponent,
     ProjectsComponent,
     SwedishComponent,
-    VocablistComponent
+    VocablistComponent,
+    GrammarComponent
   ],
   imports: [
     HttpClientModule,

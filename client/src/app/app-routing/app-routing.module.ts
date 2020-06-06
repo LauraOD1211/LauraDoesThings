@@ -5,6 +5,7 @@ import { BlogpostComponent } from '../blogpost/blogpost.component'
 import { SwedishComponent } from '../swedish/swedish.component'
 import { ProjectsComponent } from '../projects/projects.component'
 import { VocablistComponent } from '../vocablist/vocablist.component'
+import { GrammarComponent } from '../grammar/grammar.component'
 
 const routes: Routes = [
     {
@@ -26,6 +27,10 @@ const routes: Routes = [
     {
       path: 'list/:id',
       component: VocablistComponent
+    },
+    {
+      path: 'grammar/:id',
+      component: GrammarComponent
     }
 ];
 
