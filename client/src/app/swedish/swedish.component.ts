@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {MatTabsModule} from '@angular/material/tabs';
 import { Vocab } from "../vocab";
 import { Vocablist } from "../vocablist";
 import { Grammar } from "../grammar";

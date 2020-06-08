@@ -18,7 +18,7 @@
 </div-->
 <div class="container">
     <div class="card">
-        <mat-tab-group>
+        <mat-tab-group mat-align-tabs="center">
             <mat-tab label="Vocab">
                 <ng-template matTabContent>
                     <div class="card-content grey lighten-4 collection">
@@ -27,7 +27,7 @@
                 </ng-template>
             </mat-tab>
             <mat-tab label="Grammar">
-                <ng-template matTabContent>
+                <ng-template matTabContent >
                     <div class="card-content grey lighten-4 collection">
                         <a *ngFor="let grammar of grammars" [routerLink]="['/grammar', grammar._id]" class="collection-item">{{grammar.topic}}</a>
                     </div>
