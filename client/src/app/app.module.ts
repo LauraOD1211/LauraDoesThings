@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule }    from '@angular/common/http';
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { AppComponent } from './app.component';
 import { BlogpostComponent } from './blogpost/blogpost.component';
@@ -30,7 +31,8 @@ import { GrammarComponent } from './grammar/grammar.component';
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
