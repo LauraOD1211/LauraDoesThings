@@ -6,6 +6,7 @@ import { SwedishComponent } from '../swedish/swedish.component'
 import { ProjectsComponent } from '../projects/projects.component'
 import { VocablistComponent } from '../vocablist/vocablist.component'
 import { GrammarComponent } from '../grammar/grammar.component'
+import { BlogComponent } from '../blog/blog.component'
 
 const routes: Routes = [
     {
@@ -14,6 +15,10 @@ const routes: Routes = [
     },
     {
       path: 'blog',
+      component: BlogComponent,
+    },
+    {
+      path: 'blog/:id',
       component: BlogpostComponent,
     },
     { 
@@ -25,11 +30,11 @@ const routes: Routes = [
       component: ProjectsComponent
     },
     {
-      path: 'list/:id',
+      path: 'swedish-notes/list/:id',
       component: VocablistComponent
     },
     {
-      path: 'grammar/:id',
+      path: 'swedish-notes/grammar/:id',
       component: GrammarComponent
     }
 ];

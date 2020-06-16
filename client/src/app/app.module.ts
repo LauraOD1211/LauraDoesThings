@@ -14,6 +14,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SwedishComponent } from './swedish/swedish.component';
 import { VocablistComponent } from './vocablist/vocablist.component';
 import { GrammarComponent } from './grammar/grammar.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { GrammarComponent } from './grammar/grammar.component';
     ProjectsComponent,
     SwedishComponent,
     VocablistComponent,
-    GrammarComponent
+    GrammarComponent,
+    BlogComponent
   ],
   imports: [
     HttpClientModule,

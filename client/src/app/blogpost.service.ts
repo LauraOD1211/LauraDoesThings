@@ -19,4 +19,7 @@ export class BlogpostService {
   getBlogposts(): Observable<Blogpost[]> {
     return this.http.get<Blogpost[]>(this.blogpostsUrl);
   }
+  getBlogpost(id): Observable<Blogpost>{
+    return this.http.get<Blogpost>(this.blogpostsUrl+'/'+id);
+  }
 }

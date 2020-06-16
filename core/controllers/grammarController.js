@@ -2,6 +2,7 @@ const Grammar = require('../models/Grammar');
 
 module.exports = {
   getGrammars: async (req, res, next) => {
+    console.log("GET grammarposts");
     Grammar.find().exec((err, posts) => {
       console.log(posts);
       if (err) {
@@ -18,6 +19,7 @@ module.exports = {
     });
   },
   getGrammar: async (req, res, next) => {
+    console.log("GET grammarpost");
     let gID = req.params.id;
     Grammar.findOne({ "_id":gID}).exec((err, post) => {
       console.log(post);

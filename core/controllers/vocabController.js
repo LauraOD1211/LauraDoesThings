@@ -3,6 +3,7 @@ const Vocab = require('../models/Vocab');
 
 module.exports = {
   getVocablists: async (req, res, next) => {
+    console.log("GET vocabposts");
     Vocablist.find().exec((err, lists) => {
       console.log(lists);
       if (err) {
@@ -19,6 +20,7 @@ module.exports = {
     });
   },
   getVocablist: async (req, res, next) => {
+    console.log("GET vocabpost");
     let listID = req.params.id;
     Vocablist.findOne({ "_id":listID}).exec((err, list) => {
       console.log(list);
@@ -36,6 +38,7 @@ module.exports = {
     });
   },
   getVocabs: async (req, res, next) => {
+    console.log("GET vocab from list");
     let listID = req.params.id;
     Vocablist.findOne({ "_id":listID}).exec((err, list) => {
       console.log(list);
@@ -67,6 +70,7 @@ module.exports = {
     });
   },
   getVocab: async (req, res, next) => {
+    console.log("GET vocab");
     let vocabID = req.params.id;
     Vocab.findOne({ "_id":vocabID}).exec((err, vocab) => {
       console.log(vocab);
