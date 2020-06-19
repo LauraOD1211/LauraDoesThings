@@ -1,16 +1,46 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import { BlogComponent } from './blog/blog.component';
+import { VocabComponent } from './vocab/vocab.component';
+import { GrammarComponent } from './grammar/grammar.component';
+import { AuthGuardGuard } from './auth-guard.guard';
+import { LogoutComponent} from './logout/logout.component';
 
 const routes: Routes = [
   {
     path: '',
     component: LoginComponent,
   },
+  {
+    path: 'blog',
+    component: BlogComponent,
+    canActivate: [AuthGuardGuard]
+  },
+  {
+    path: 'vocab',
+    component: VocabComponent,
+    canActivate: [AuthGuardGuard]
+  },
+  {
+    path: 'grammar',
+    component: GrammarComponent,
+    canActivate: [AuthGuardGuard]
+  },
+  { 
+    path: 'logout', 
+    component: LogoutComponent, 
+    canActivate: [AuthGuardGuard]
+  },
+  { 
+    path: '**', 
+    redirectTo: '' 
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuardGuard]
 })
 export class AppRoutingModule { }
