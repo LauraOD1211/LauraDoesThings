@@ -11,6 +11,10 @@ import { GrammarComponent } from './grammar/grammar.component';
 import { LogoutComponent } from './logout/logout.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule }    from '@angular/common/http';
+import { BlogeditComponent } from './blogedit/blogedit.component';
+import { BlogdeleteComponent } from './blogdelete/blogdelete.component';
+import { BlogeditorComponent } from './blogeditor/blogeditor.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -20,14 +24,18 @@ import { HttpClientModule }    from '@angular/common/http';
     BlogComponent,
     VocabComponent,
     GrammarComponent,
-    LogoutComponent
+    LogoutComponent,
+    BlogeditComponent,
+    BlogdeleteComponent,
+    BlogeditorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
     StorageServiceModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,38 +1,20 @@
-<!--div class="container">
-    <div class="card">
-        <div class="card-tabs">
-            <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a [routerLink]="['/swedish-notes']" fragment="vocab">Vocab</a></li>
-                <li class="tab"><a class="active" [routerLink]="['/swedish-notes']" fragment="grammar">Grammar</a></li>
-            </ul>
-        </div>
-        <div class="card-content grey lighten-4">
-            <div id="vocab" class="collection">
-                <a *ngFor="let vocablist of vocablists" [routerLink]="['/list', vocablist._id]" class="collection-item">{{vocablist.topic}}</a>
-            </div>
-            <div id="grammar" class="collection">
-                <a *ngFor="let grammar of grammars" [routerLink]="['/grammar', grammar._id]" class="collection-item">{{grammar.topic}}</a>
-            </div>
-        </div>
-    </div>
-</div-->
 <div class="container">
     <div class="card">
         <mat-tab-group mat-align-tabs="center">
             <mat-tab label="Vocab">
                 <ng-template matTabContent>
                     <div class="card-content grey lighten-4 collection">
-                        <a *ngFor="let vocablist of vocablists" [routerLink]="['/list', vocablist._id]" class="collection-item">{{vocablist.topic}}</a>
+                        <a *ngFor="let vocablist of vocablists" [routerLink]="['list', vocablist._id]" class="collection-item">{{vocablist.topic}}</a>
                     </div>
                 </ng-template>
             </mat-tab>
             <mat-tab label="Grammar">
                 <ng-template matTabContent >
                     <div class="card-content grey lighten-4 collection">
-                        <a *ngFor="let grammar of grammars" [routerLink]="['/grammar', grammar._id]" class="collection-item">{{grammar.topic}}</a>
+                        <a *ngFor="let grammar of grammars" [routerLink]="['grammar', grammar._id]" class="collection-item">{{grammar.topic}}</a>
                     </div>
                 </ng-template>
             </mat-tab>
-          </mat-tab-group>
+        </mat-tab-group>
     </div>
 </div>

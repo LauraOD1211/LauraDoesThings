@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const req = require('require-yml');
 const conf = req('../config.yml')
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+
 
 var indexRouter = require('./routes/index');
 var blogRouter = require('./routes/blog');
@@ -27,6 +29,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
+app.use(cookieParser());
 
 app.use('', express.static(path.join(__dirname, '/public')));
 app.use('/admin', express.static(path.join(__dirname, '/admin')));

@@ -14,7 +14,6 @@ export class AuthService {
 
   public isAuthenticated(): boolean {
     const token = localStorage.getItem('token');
-    console.log(token+"history");
     if(!token){
       return false;
     }
@@ -22,6 +21,11 @@ export class AuthService {
   };
 
   public setInfo(token) {
+    localStorage.setItem("token",token);
+  }
+
+  public resetInfo(token) {
+    localStorage.removeItem('token');
     localStorage.setItem("token",token);
   }
     

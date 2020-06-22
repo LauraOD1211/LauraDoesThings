@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-vocab',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VocabComponent implements OnInit {
 
-  constructor() { }
+  message: string;
+  err: string;
+
+  constructor(private http: HttpClient, private router : Router) { }
 
   ngOnInit(): void {
+    this.message = "";
+    this.http.post('ref',{});
   }
 
 }
