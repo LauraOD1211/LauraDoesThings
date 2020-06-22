@@ -18,9 +18,9 @@
         <div class="col s12 m12">
             <div class="card collection">
                 <ul>
-                    <li *ngFor="let blogpost of blogposts" class="collection-item">
+                    <a *ngFor="let blogpost of blogposts" [routerLink]="['/blog/edit', blogpost._id]" class="collection-item">
                         <span class="card-title">{{blogpost.title}}<span class="right">{{blogpost.posted | date}}</span></span>
-                    </li>
+                    </a>
                 </ul>
             </div>
         </div>    

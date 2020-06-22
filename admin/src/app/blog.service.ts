@@ -28,4 +28,8 @@ export class BlogService {
   deleteBlogpost(id) {
     return this.http.delete(this.adminUrl+'/delete/'+id);
   }
+
+  putBlogpost(id, title, topic, body) {
+    return this.http.put(this.adminUrl+'/edit/'+id, {title, topic, body});
+  }
 }

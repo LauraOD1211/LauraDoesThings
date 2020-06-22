@@ -158,9 +158,19 @@ module.exports = {
         if(!req.body.title || !req.body.topic || !req.body.body){
             return res.status(400).json({"error":"missing elements"});
         }
-        if(req.body.title.length ==0 || req.body.topic.length ==0  || req.body.body.length ==0 ){
+        if(req.body.title.length == 0 || req.body.topic.length == 0  || req.body.body.length == 0 ){
             return res.status(400).json({"error":"incomplete form"});
         }
+
+        BlogPost.update({_id:req.params.id}, {$set: {title:req.body.title, topic:req.body.topic, body:req.body.body}}).exec((err, msg) => {
+            console.log(msg);
+            if (err) {
+              return res.status(500).json({
+                error: err
+              })
+            }
+            return res.status(200).json({"token":token, "message":"success"});
+        });
 
               
     },

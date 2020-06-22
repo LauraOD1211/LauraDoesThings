@@ -8,6 +8,8 @@ import { AuthGuardGuard } from './auth-guard.guard';
 import { LogoutComponent } from './logout/logout.component';
 import { BlogeditComponent } from './blogedit/blogedit.component';
 import { BlogdeleteComponent } from './blogdelete/blogdelete.component';
+import { BlogeditorComponent } from './blogeditor/blogeditor.component';
+
 
 const routes: Routes = [
   {
@@ -22,6 +24,11 @@ const routes: Routes = [
   {
     path: 'blog/edit',
     component: BlogeditComponent,
+    canActivate: [AuthGuardGuard]
+  },
+  {
+    path: 'blog/edit/:id',
+    component: BlogeditorComponent,
     canActivate: [AuthGuardGuard]
   },
   {
